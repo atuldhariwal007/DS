@@ -45,13 +45,13 @@ public class DynamicSearchDao {
 	}
 		
 		
-	Connection getConnection(){
+	public Connection getConnection(){
 		
 		
 		try{
 			InitialContext context = new InitialContext();
 			Context env = (Context) context.lookup("java:/comp/env");
-			ds = (DataSource) env.lookup("jdbc/Test");
+			ds = (DataSource) env.lookup("jdbc/erp");
 			conn = ds.getConnection();
 			
 			}
